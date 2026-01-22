@@ -1,0 +1,90 @@
+<!-- css1 -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การ์ดสินค้า</title>
+    <style>
+        body{
+            background-color: gainsboro;
+            font-family: sans-serif;
+            padding-top: 50px;
+        }
+
+        .product-card{
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1) ;
+
+            text-align: center;
+
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .product-card img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .product-title{
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 10px 0;
+            color:#333;
+        }
+
+        .product-desc{
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .product-price{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-price span{
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .add-to-cart-btn{
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 10px 20px;
+
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" 
+        alt="นาฬิกาข้อมือ Smart Watch">
+
+        <div class="product-title">Smart Watch Pro</div>
+
+        <p class="product-desc">นาฬิกาอัจฉริยะ ดีไซน์ทันสมัย วัดชีพจรแม่นยำ แบตเตอร์รี่อึด ทนทาน</p>
+
+        <p class="product-price">ราคา: <span>$96,401.04</span></p>
+        
+        <button class="add-to-cart-btn">เพิ่มลงตะกร้า</button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xercises5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe6ea 100%);
+            color: #5e4b52;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            background-color: #ffffff;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.25);
+            position: relative;
+        }
+
+        h1 {
+            color: #ff8fa3;
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid #ffe3e8;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            background-color: #fff9fa;
+            border-radius: 10px;
+            padding: 20px 20px 20px 40px;
+            border: 1px dashed #ffc2d1;
+        }
+
+        li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        code {
+            background-color: #eee;
+            color: #d63384;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        .example-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 4px solid #fff;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background-color: white;
+            color: #ff8fa3;
+            border: 2px solid #ff8fa3;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #ff8fa3;
+            color: white;
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Ex.5 : HTML : BEGINNER : สร้างหน้าโปรไฟล์ส่วนตัวง่ายๆ ด้วย HTML</h1>
+        
+        <p>
+            คุณได้รับมอบหมายให้สร้างหน้าเว็บโปรไฟล์ส่วนตัวอย่างง่ายโดยใช้ HTML พื้นฐาน เพื่อแสดงข้อมูลเกี่ยวกับตัวคุณเอง 
+            จุดประสงค์คือเพื่อให้คุณคุ้นเคยกับการใช้แท็ก HTML ทั่วไป เช่น หัวข้อ, ย่อหน้า, รูปภาพ, รายการ และลิงก์
+        </p>
+
+        <p><strong>สิ่งที่โจทย์ต้องการ :</strong></p>
+        
+        <ul>
+            <li>หน้าเว็บต้องมีชื่อเรื่อง (title) ในแท็ก <code>&lt;head&gt;</code> ที่เหมาะสมกับโปรไฟล์ส่วนตัว (เช่น "โปรไฟล์ของ [ชื่อของคุณ]")</li>
+            <li>ต้องมีส่วนหัวหลัก (<code>&lt;h1&gt;</code>) ที่แสดงชื่อของคุณ</li>
+            <li>ต้องมีรูปภาพโปรไฟล์ (<code>&lt;img&gt;</code>) สามารถใช้รูป placeholder ได้ เช่น <code>https://via.placeholder.com/150</code></li>
+            <li>ต้องมีส่วนแนะนำตัวสั้นๆ หรือคำอธิบายเกี่ยวกับตัวคุณ (ใช้ <code>&lt;p&gt;</code>)</li>
+            <li>ต้องมีรายการข้อมูลที่น่าสนใจเกี่ยวกับตัวคุณ เช่น งานอดิเรก หรือสิ่งที่ชอบ (ใช้ <code>&lt;ul&gt;</code> และ <code>&lt;li&gt;</code> อย่างน้อย 3 รายการ)</li>
+            <li>ต้องมีลิงก์ไปยังโซเชียลมีเดียหรือเว็บไซต์อื่นๆ (ใช้ <code>&lt;a&gt;</code>) อย่างน้อย 2 ลิงก์</li>
+        </ul>
+
+        <img src="ex5.png" alt="ex5" class="example-image">
+
+        <button class="back-btn" onclick="history.back()">
+            ← กลับ
+        </button>
+
+    </div>
+
+</body>
+</html>

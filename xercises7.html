@@ -1,0 +1,45 @@
+<!-- java1 -->
+ <!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+        #count-display { font-size: 3rem; margin: 20px; font-weight: bold; }
+        button { padding: 10px 20px; font-size: 1.2rem; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>ตัวนับเลข</h1>
+    
+    <div id="count-display">0</div>
+
+    <button id="decrement-btn">ลดค่า</button>
+    <button id="increment-btn">เพิ่มค่า</button>
+
+    <script>
+        let count = 0;
+
+        const display = document.getElementById('count-display');
+        const incrementBtn = document.getElementById('increment-btn');
+        const decrementBtn = document.getElementById('decrement-btn');
+
+        function updateDisplay() {
+            display.innerText = count;
+        }
+
+        incrementBtn.addEventListener('click', function() {
+            count++;
+            updateDisplay();
+        });
+
+        decrementBtn.addEventListener('click', function() {
+            count--;
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>

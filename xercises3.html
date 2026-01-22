@@ -1,0 +1,174 @@
+<!-- css3 -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #017BFF;
+            --primary-hover: #0056b3;
+            --text-color: #333333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --card-radius: 12px;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-lg: 0 10px 20px rgba(0,0,0,0.1);
+            --gap-size: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .product-grid {
+            display: grid;
+            gap: var(--gap-size);
+            grid-template-columns: 1fr; 
+        }
+
+        @media (min-width: 600px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            text-align: center;
+            padding: 30px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-image {
+            width: 80px;
+            height: 80px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+            font-size: 30px;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.03) 5px, rgba(0,0,0,0.03) 10px);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .btn-details {
+            margin-top: auto;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-details:hover {
+            background-color: var(--primary-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="product-grid">
+            
+            <article class="card">
+                <div class="card-image">📦</div>
+                <h3 class="card-title">Product Title 1</h3>
+                <p class="card-desc">A brief description of the product highlights its key features concisely.</p>
+                <button class="btn-details">View Details</button>
+            </article>
+
+            <article class="card">
+                <div class="card-image">✨</div>
+                <h3 class="card-title">Product Title 2</h3>
+                <p class="card-desc">Designed for modern use cases with high durability and style.</p>
+                <button class="btn-details">View Details</button>
+            </article>
+
+            <article class="card">
+                <div class="card-image">🚀</div>
+                <h3 class="card-title">Product Title 3</h3>
+                <p class="card-desc">Experience the next generation of performance with this item.</p>
+                <button class="btn-details">View Details</button>
+            </article>
+
+            <article class="card">
+                <div class="card-image">🛠️</div>
+                <h3 class="card-title">Product Title 4</h3>
+                <p class="card-desc">Built with precision engineering to satisfy the most demanding users.</p>
+                <button class="btn-details">View Details</button>
+            </article>
+
+            <article class="card">
+                <div class="card-image">💎</div>
+                <h3 class="card-title">Product Title 5</h3>
+                <p class="card-desc">Premium quality materials ensuring long-lasting satisfaction.</p>
+                <button class="btn-details">View Details</button>
+            </article>
+
+            <article class="card">
+                <div class="card-image">💡</div>
+                <h3 class="card-title">Product Title 6</h3>
+                <p class="card-desc">Innovative solution for your everyday problems. Simple and effective.</p>
+                <button class="btn-details">View Details</button>
+            </article>
+
+        </div>
+    </div>
+
+</body>
+</html>

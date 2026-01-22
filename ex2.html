@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xercises2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe6ea 100%);
+            color: #5e4b52;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            background-color: #ffffff;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.25);
+            position: relative;
+        }
+
+        h1 {
+            color: #ff8fa3;
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid #ffe3e8;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            background-color: #fff9fa;
+            border-radius: 10px;
+            padding: 20px 20px 20px 40px;
+            border: 1px dashed #ffc2d1;
+        }
+
+        li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        li strong {
+            color: #d63384;
+            font-weight: 600;
+        }
+
+        code {
+            background-color: #eee;
+            color: #d63384;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        .example-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 4px solid #fff;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background-color: white;
+            color: #ff8fa3;
+            border: 2px solid #ff8fa3;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #ff8fa3;
+            color: white;
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Ex.2 : CSS : Intermediate : สร้างแถบนำทางที่ตอบสนองและมีเมนูดรอปดาวน์</h1>
+        
+        <p>
+            คุณจะได้รับโค้ด HTML สำหรับโครงสร้างแถบนำทางพื้นฐาน รวมถึงรายการเมนูหลักและเมนูดรอปดาวน์บางส่วน 
+            งานของคุณคือการใช้ CSS เพื่อทำให้แถบนำทางนี้ดูดี ตอบสนองต่อขนาดหน้าจอที่แตกต่างกัน และมีฟังก์ชันเมนูดรอปดาวน์ที่ทำงานได้อย่างถูกต้อง 
+            รวมถึงการจัดการเมนูสำหรับหน้าจอขนาดเล็กโดยไม่ต้องใช้ JavaScript
+        </p>
+
+        <p><strong>สิ่งที่โจทย์ต้องการ:</strong></p>
+        
+        <ul>
+            <li>
+                <strong>การจัดวางแถบนำทาง:</strong> จัดเรียงองค์ประกอบใน <code>.navbar</code> (โลโก้, ลิงก์เมนู, ปุ่มสลับ) 
+                ให้อยู่ในแนวนอน และจัดกึ่งกลางหรือจัดชิดขอบตามความเหมาะสม
+            </li>
+            <li>
+                <strong>การจัดรูปแบบลิงก์:</strong> จัดรูปแบบลิงก์เมนูหลักให้สวยงาม เช่น การกำหนดสีพื้นหลัง, สีข้อความ, padding, 
+                และการเปลี่ยนสถานะเมื่อวางเมาส์เหนือ (<code>:hover</code>)
+            </li>
+            <li>
+                <strong>เมนูดรอปดาวน์ (Desktop):</strong> ซ่อน <code>.dropdown-content</code> ไว้แต่แรก เมื่อวางเมาส์เหนือ (<code>:hover</code>) 
+                ที่ <code>.dropdown</code> จะต้องแสดง <code>.dropdown-content</code> ขึ้นมา จัดตำแหน่ง <code>.dropdown-content</code> 
+                ให้อยู่ใต้ลิงก์หลักอย่างถูกต้องและมีสไตล์ที่ชัดเจน (เช่น มีพื้นหลัง, border-radius, shadow)
+            </li>
+            <li>
+                <strong>การตอบสนอง (Responsive Design):</strong> ใช้ Media Query เพื่อปรับ layout ของแถบนำทางเมื่อหน้าจอมีขนาดเล็กกว่า 
+                768px (หรือค่าอื่นที่เหมาะสม)
+            </li>
+            <li>
+                <strong>เมนู Hamburger (Mobile):</strong> บนหน้าจอขนาดเล็ก ให้ซ่อน <code>#menu-toggle-checkbox</code> และ 
+                <code>label.menu-toggle</code> บนหน้าจอขนาดใหญ่ และแสดงบนหน้าจอขนาดเล็ก เมื่อ <code>#menu-toggle-checkbox</code> 
+                ถูกเลือก (<code>:checked</code>) บนหน้าจอขนาดเล็ก ให้แสดง <code>.nav-links</code> ที่ซ่อนอยู่และซ้อนกันในแนวตั้ง 
+                เมนูดรอปดาวน์บนมือถือควรปรับการแสดงผลให้เหมาะสม
+            </li>
+        </ul>
+
+        <img src="ex2.png" alt="ex2" class="example-image">
+
+        <button class="back-btn" onclick="history.back()">
+            ← กลับ
+        </button>
+
+    </div>
+
+</body>
+</html>

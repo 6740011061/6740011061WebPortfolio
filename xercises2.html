@@ -1,0 +1,226 @@
+<!-- css2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHub Responsive Nav</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2d3748;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.5px;
+            gap: 8px;
+        }
+
+        .logo::before {
+            content: 'D';
+            background-color: #3182ce;
+            color: white;
+            padding: 2px 8px;
+            font-size: 20px;
+            border-radius: 6px 0 6px 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #718096;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .nav-links a:hover {
+            color: #3182ce;
+        }
+
+        .nav-links li.active a {
+            color: #2b6cb0;
+            border-bottom: 3px solid #3182ce;
+            padding-bottom: 23px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown > a::after {
+            content: ' \25BE'; 
+            font-size: 12px;
+            margin-left: 4px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: -10px;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid #edf2f7;
+            z-index: 1000;
+            flex-direction: column;
+            padding: 8px 0;
+        }
+
+        @media (min-width: 769px) {
+            .dropdown:hover .dropdown-content {
+                display: flex;
+            }
+        }
+
+        .dropdown-content li { 
+            width: 100%; 
+        }
+
+        .dropdown-content a {
+            padding: 10px 24px;
+            text-transform: none;
+            font-weight: 500;
+            font-size: 14px;
+            color: #4a5568;
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f7fafc;
+            color: #3182ce;
+        }
+
+        #menu-toggle { display: none; }
+        .menu-icon { display: none; }
+
+        @media screen and (max-width: 768px) {
+            .navbar { padding: 0 20px; }
+
+            .menu-icon {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+                color: #2d3748;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                gap: 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+                border-top: 1px solid #edf2f7;
+            }
+
+            #menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .nav-links li { width: 100%; }
+
+            .nav-links a {
+                padding: 16px 24px;
+                border-bottom: 1px solid #edf2f7;
+                font-size: 14px;
+            }
+
+            .nav-links li.active a {
+                border-bottom: 1px solid #edf2f7;
+                border-left: 5px solid #3182ce;
+                padding-left: 19px;
+                padding-bottom: 16px;
+                background-color: #f7fafc;
+                color: #2b6cb0;
+            }
+
+            .dropdown-content {
+                display: flex;
+                position: static;
+                box-shadow: none;
+                border: none;
+                background-color: #f8f9fa;
+                width: 100%;
+                padding: 0;
+            }
+
+            .dropdown-content a {
+                padding-left: 48px;
+                font-size: 13px;
+                color: #718096;
+                border-bottom: 1px solid #edf2f7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">DEVHUB</a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <ul class="nav-links">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Challenges</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

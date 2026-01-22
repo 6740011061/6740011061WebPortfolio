@@ -1,0 +1,134 @@
+<!-- html3 -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Challenge</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .mafiaa-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-text h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .profile-text p {
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+
+        header, section {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #333;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 480px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>HTML User Profile Challenge</p>
+    </header>
+
+    <main>
+        
+        <article>
+            
+            <header>
+                <h1>Responsive User Profile Page with Semantic HTML</h1>
+            </header>
+
+            <section class="profile-container">
+                <img class="mafiaa-img" src="me1.JPG" alt="Profile picture of Anuthida Butsada">
+                
+                <div class="profile-text">
+                    <h2>Anuthida Butsada</h2>
+                    <p><strong>Web Developer & Educator</strong></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>About Me</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do 
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML5 (Responsive Design)</li>
+                    <li>JavaScript (DOM Manipulation)</li>
+                    <li>Search Engine Optimization (SEO)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Social Media Links</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#" target="_blank">Facebook</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                        <li><a href="#" target="_blank">GitHub</a></li>
+                        <li><a href="#" target="_blank">X (Twitter)</a></li>
+                        <li><a href="#" target="_blank">Portfolio Website</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <small>&copy; 2023 HTML Challenges. All rights reserved.</small><br>
+        <small>Contact: <a href="mailto:info@htmlchallenges.com">info@htmlchallenges.com</a></small>
+    </footer>
+
+</body>
+</html>
