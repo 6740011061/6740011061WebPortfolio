@@ -68,7 +68,26 @@
         .add-to-cart-btn:hover {
             background-color: #0056b3;
         }
+        .back-btn-minimal {
+            display: inline-block;
+            text-decoration: none;
+            color: #000;           
+            border: 1px solid #000; 
+            background-color: #fff;
+            padding: 10px 30px;
+            border-radius: 50px;  
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
+        
+        .back-btn-minimal:hover {
+            background-color: #000;
+            color: #fff;          
+            transform: translateY(-2px);
+        }
    
     </style>
 </head>
@@ -84,6 +103,12 @@
         <p class="product-price">ราคา: <span>$96,401.04</span></p>
         
         <button class="add-to-cart-btn">เพิ่มลงตะกร้า</button>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="ex1.html" class="back-btn-minimal">
+            ← กลับ
+        </a>
     </div>
     
 </body>
